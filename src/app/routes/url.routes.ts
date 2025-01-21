@@ -1,10 +1,10 @@
 import { Router } from "express";
-import AuthController from "../controllers/auth.controller";
+import UrlController from "../controllers/url.controller";
 
 
 const router: Router = Router();
 
-router.post("/register", AuthController.register);
-router.post("/login", AuthController.login);
+router.post("/short-url", UrlController.shortUrl);
+router.get("/get-short-url", UrlController.getAllShortUrl);
 
 export default router;
